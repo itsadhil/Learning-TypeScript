@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Page</title>
-  <script src="login.js" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <script src="login.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
-  <form id="loginForm" class="bg-gray-800 p-8 rounded-xl shadow-md w-full max-w-sm">
-    <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+    <form id="loginForm" class="bg-gray-800 p-8 rounded-xl shadow-md w-full max-w-sm">
+        <h2 class="text-2xl font-bold mb-6 text-center">Welcome Back</h2>
 
-    <div class="mb-4">
-      <label for="email" class="block mb-1">Email</label>
-      <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500" required />
-    </div>
+        <div class="mb-4">
+            <label for="email" class="block mb-1">Email</label>
+            <div class="relative">
+                <input type="email" id="email" name="email" placeholder="your@email.com" 
+                    class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+                <span class="absolute right-3 top-2 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"></svg>
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
 
-    <div class="mb-6">
-      <label for="password" class="block mb-1">Password</label>
-      <input type="password" id="password" name="password" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500" required />
-    </div>
+        <div class="mb-6">
+            <label for="password" class="block mb-1">Password</label>
+            <div class="relative">
+                <input type="password" id="password" name="password" placeholder="••••••••" 
+                    class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+                <span class="absolute right-3 top-2 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
 
-    <p id="error" class="text-red-500 text-sm mb-4 hidden"></p>
+        <div class="flex items-center justify-between mb-6">
+            <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                <span class="ml-2 text-sm text-gray-400">Remember me</span>
+            </label>
+            <a href="#" class="text-sm text-blue-500 hover:text-blue-400">Forgot password?</a>
+        </div>
 
-    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 transition duration-200 py-2 rounded font-semibold">
-      Log In
-    </button>
-  </form>
+        <p id="error" class="text-red-500 text-sm mb-4 hidden"></p>
+
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 transition duration-200 py-2 rounded font-semibold flex items-center justify-center">
+            <span>Log In</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" class="ml-2">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+        </button>
+
+        <p class="text-center mt-4 text-sm text-gray-400">
+            Don't have an account? <a href="#" class="text-blue-500 hover:text-blue-400">Sign up</a>
+        </p>
+    </form>
 </body>
-</html>
+</html></svg>
